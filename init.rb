@@ -12,7 +12,7 @@ if defined?(ActionController)
   end
 
   if Rails.env == "test"
-    require 'action_controller/test_process'
+    require 'action_dispatch/testing/test_process'
     ActionDispatch::TestRequest.send :include, DetectMobileBrowser::Request
   end
 
